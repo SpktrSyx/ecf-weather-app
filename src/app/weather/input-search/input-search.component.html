@@ -1,0 +1,24 @@
+
+  <form [formGroup]="cityForm" *ngIf="cityForm" (submit)="sendCity()">
+    <ion-item>
+      <ion-label position="floating">Entrez une ville</ion-label>
+        <ion-input formControlName="city" type="text"></ion-input>
+    </ion-item>
+  </form>
+
+  
+      <ion-button class="submitBtn ion-activatable ripple-parent"
+      type="submit" 
+      shape="round" 
+      color="primary" 
+      mode="md"
+      strong="true"
+      slot="icon-only">
+      <ion-icon name="search-outline"></ion-icon>
+      <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+     
+
+
+      <!-- fill="clear" -->
+
