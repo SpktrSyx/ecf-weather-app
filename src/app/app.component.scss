@@ -1,0 +1,40 @@
+:host{
+  .ion-page {
+  justify-content: inherit !important;
+  }
+  .weather { 
+    display: grid;  
+    grid-template-columns: auto;
+    grid-template-rows: 0.5fr auto;
+    
+    }  
+}
+
+
+:root {
+    --ion-background-color: #109CE7;
+    --ion-background-color-rgb: 16,156,231;
+  
+    --ion-text-color: #FFFFFF;
+    --ion-text-color-rgb: 0,0,0;
+  
+    --ion-color-step-50: #0f94db;
+    --ion-color-step-100: #0e8cd0;
+    --ion-color-step-150: #0e85c4;
+    --ion-color-step-200: #0d7db9;
+    --ion-color-step-250: #0c75ad;
+    --ion-color-step-300: #0b6da2;
+    --ion-color-step-350: #0a6596;
+    --ion-color-step-400: #0a5e8b;
+    --ion-color-step-450: #09567f;
+    --ion-color-step-500: #084e74;
+    --ion-color-step-550: #074668;
+    --ion-color-step-600: #063e5c;
+    --ion-color-step-650: #063751;
+    --ion-color-step-700: #052f45;
+    --ion-color-step-750: #04273a;
+    --ion-color-step-800: #031f2e;
+    --ion-color-step-850: #021723;
+    --ion-color-step-900: #021017;
+    --ion-color-step-950: #01080c;
+  }

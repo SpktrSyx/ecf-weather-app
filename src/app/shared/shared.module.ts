@@ -4,18 +4,21 @@ import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from '../weather/menu.component';
+
 
 
 @NgModule({
-  declarations: [],
+  declarations: [MenuComponent],
   imports: [
     CommonModule,
     IonicModule.forRoot()
   ],
   exports: [
     IonicModule,
-    ReactiveFormsModule,
+    MenuComponent,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule
   ]
 })

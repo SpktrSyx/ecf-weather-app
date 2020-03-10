@@ -1,29 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { CityService } from '../shared/services/city.service';
+import { WeatherService } from '../shared/services/weather.service';
+import { Weather } from '../shared/models/weather.model';
 
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.scss'],
 })
-export class WeatherComponent implements OnInit {
-
-  constructor(private menu: MenuController) { }
-
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
+export class WeatherComponent implements AfterViewInit {
+  
+  private weather: Weather;
+  
+  constructor(private cityService: CityService,
+    private service: WeatherService) {
+      this.service = service;
+      this.weather = this.service.get();
   }
 
-  openEnd() {
-    this.menu.open('end');
+  ngAfterViewInit(): void {
+    
+
   }
-
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
-  }
-
-  ngOnInit() {}
-
 }

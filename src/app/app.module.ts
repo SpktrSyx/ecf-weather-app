@@ -10,22 +10,38 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { WeatherModule } from './weather/weather.module';
 import { AppRoutingModule } from './app-routing.module';
-import { CityListModule } from './weather/city-list/city-list.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CityService } from './shared/services/city.service';
+import { WeatherService } from './shared/services/weather.service';
+import { PositionService } from './shared/services/position.service';
+import { InputSearchComponent } from './weather/input-search/input-search.component';
+import { CityListService } from './shared/services/city-list.service';
+import { WeatherComponent } from './weather/weather.component';
+import { PollutionService } from './shared/services/pollution.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputSearchComponent,
+    WeatherComponent
   ],
   entryComponents: [],
   imports: [
     BrowserModule,
     SharedModule,
-    CityListModule,
+    ReactiveFormsModule,
     WeatherModule,
-    AppRoutingModule 
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
+    WeatherService,
+    CityService,
+    CityListService,
+    PositionService,
+    PollutionService,
     StatusBar,
     SplashScreen,
     { 
