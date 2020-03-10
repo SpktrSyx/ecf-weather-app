@@ -42,8 +42,6 @@ import { PollutionService } from './shared/services/pollution.service';
     CityListService,
     PositionService,
     PollutionService,
-    StatusBar,
-    SplashScreen,
     { 
       provide: RouteReuseStrategy, 
       useClass: IonicRouteStrategy 

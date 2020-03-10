@@ -2,12 +2,27 @@
   .ion-page {
   justify-content: inherit !important;
   }
+
   .weather { 
     display: grid;  
     grid-template-columns: auto;
     grid-template-rows: 0.5fr auto;
-    
-    }  
+    }
+
+  ion-app{
+    --background: none;
+      // --background: #fff url('../assets/img/head-sky.jpg') no-repeat center center / cover;
+      background-image: url('../assets/img/head-sky.jpg');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: seashell;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    // ion-menu{
+    //   --background: transparent;
+    //   }
 }
 
 

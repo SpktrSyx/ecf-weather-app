@@ -19,7 +19,6 @@ export class InputSearchComponent implements AfterViewInit {
     private formBuilder: FormBuilder,
     private weatherService: WeatherService,
     private cityService: CityService,
-    private pollutionService: PollutionService
     ) {
     this.weatherSearchForm = this.formBuilder.group({
       'city' : ['', Validators.required]
